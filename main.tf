@@ -16,3 +16,13 @@ resource "null_resource" "sleep" {
     command = "sleep ${var.sleepy_time}"
   }
 }
+
+resource "null_resource" "sleep1" {
+  triggers {
+    uuid = "${uuid()}"
+  }
+
+  provisioner "local-exec" {
+    command = "echo ${var.sleepy_time} > test.out"
+  }
+}
