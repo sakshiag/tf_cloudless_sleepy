@@ -23,6 +23,8 @@ resource "null_resource" "sleep1" {
   }
 
   provisioner "local-exec" {
-    command = "echo ${var.sleepy_time} > test.out"
+    command = "echo ${var.SCHEMATICSLOCATION}"
   }
 }
+
+variable "SCHEMATICSLOCATION" {}
