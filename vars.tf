@@ -9,3 +9,10 @@ variable "sleepy_time" {
   description = "How long our local-exec will take a nap."
   default     = 0
 }
+
+
+variable "sample_var_list" {
+  description = "How long our local-exec will take a nap."
+  type = "list"
+  default     = ["test1","test2"]
+}
