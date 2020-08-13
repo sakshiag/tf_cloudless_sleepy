@@ -23,7 +23,7 @@ resource "null_resource" "sleep1" {
   }
 
   provisioner "local-exec" {
-    command = "echo ${var.SCHEMATICSLOCATION}"
+    command = "echo ${var.sample_var_list[0]}"
   }
 }
 
